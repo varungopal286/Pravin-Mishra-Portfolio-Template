@@ -20,7 +20,7 @@ This repository contains a clean, professional-looking **static portfolio websit
 A portfolio-style website hosted on:
 - **Ubuntu VM**
 - **Nginx**
-- Accessible via: `http://<public-ip>`
+- Accessible via: `http://44.222.176.128/`
 
 ---
 
@@ -36,7 +36,23 @@ Original:
 Add this line (example):
 
 ```html
-<p><strong>Deployed by:</strong> DMI Cohort 2 | Rahul Sharma | Group 4 | Week 1 | 16-01-2026</p>
+<p>Pravin Mishra Portfolio v1.0 — Deployed on <span id="deployDate">05 Feb 2026</span> — By Varun Gopal<p>
 ```
+JavaScript:
+```html
+<!-- Bottom -->
+      <div class="footer-bottom">
+        <p>© <span id="year"></span> <span style="font-size: 20px;">  Pravin Mishra</span>. All rights reserved.</p>
+         <p>Crafted with <span>cloud</span> excellence by Pravin Mishra</p>
+         <p>Pravin Mishra Portfolio v1.0 — Deployed on <span id="deployDate">05 Feb 2026</span> — By Varun Gopal<p>
+       </div>
 
+       <script>
+         const d = new Date();
+         const formattedDate = d.toISOString().split('T')[0];
+         document.getElementById("deployDate").textContent = formattedDate;
+       </script>
+     </div>
+   </footer>
+```
 ✅ This proof must be visible in your browser screenshot submission.
